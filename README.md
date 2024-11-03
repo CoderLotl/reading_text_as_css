@@ -11,4 +11,4 @@
 ## About the Project
 
 A super simple project that reads text and uses it as CSS to style a filler text at the bottom of the page.
-Nothing else.
+Nothing else. Even this README is an overkill for this.
