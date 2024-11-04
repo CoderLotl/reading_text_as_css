@@ -44,13 +44,6 @@ document.addEventListener('DOMContentLoaded', ()=>
       if(event.key == '{')
       {
         event.preventDefault();
-        textarea.value += '{';
-        textarea.value += `\r\n\n}`;
-      }
-      if(event.key == ':')
-      {
-        event.preventDefault();            
-
         // Insert { and } on new line, indented
         const currentLine = getCurrentLine(textarea.value, textarea.selectionStart);
         const indentation = getIndentationLevel(currentLine);
