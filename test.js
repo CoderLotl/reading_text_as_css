@@ -41,16 +41,6 @@ document.addEventListener('DOMContentLoaded', ()=>
         textarea.value = textarea.value.substring(0, selectionStart) + '    ' + textarea.value.substring(selectionEnd);
         textarea.setSelectionRange(selectionStart + 4, selectionStart + 4);
       }
-      if(event.key == '{')
-      {
-        event.preventDefault();
-        // Insert { and } on new line, indented
-        const currentLine = getCurrentLine(textarea.value, textarea.selectionStart);
-        const indentation = getIndentationLevel(currentLine);
-        const newLine = '\n' + ' '.repeat(indentation + 4) + '}';
-        textarea.value = textarea.value.substring(0, textarea.selectionStart) + '{' + newLine + textarea.value.substring(textarea.selectionEnd);
-        textarea.setSelectionRange(textarea.selectionStart + 1, textarea.selectionStart + 1);
-      }
     });
 });
 
